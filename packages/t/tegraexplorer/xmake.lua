@@ -3,12 +3,8 @@ package("tegraexplorer")
     set_description("Payload for Switch exploit RCM mode")
     set_license("MIT")
 
-    add_urls("https://github.com/exploitz86/TegraExplorer/archive/refs/heads/master.tar.gz", {alias = "github"})
-    add_versions("master", "0000000000000000000000000000000000000000")
-
-    on_fetch("github", function (package)
-        return {repo = "exploitz86/TegraExplorer"}
-    end)
+    add_urls("https://github.com/exploitz86/TegraExplorer/archive/refs/heads/master.tar.gz")
+    add_versions("1.0", "0000000000000000000000000000000000000000")
 
     on_install("cross@aarch64", function (package)
         -- Set up devkitARM environment
