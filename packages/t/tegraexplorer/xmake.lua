@@ -6,7 +6,7 @@ package("tegraexplorer")
     add_urls("https://github.com/exploitz86/TegraExplorer/archive/refs/heads/master.tar.gz")
     add_versions("1.0", "0000000000000000000000000000000000000000")
 
-    on_install("cross@aarch64", function (package)
+    on_install(function (package)
         -- Set up devkitARM environment
         local devkitarm = os.getenv("DEVKITARM") or "/opt/devkitpro/devkitARM"
         os.setenv("DEVKITARM", devkitarm)
