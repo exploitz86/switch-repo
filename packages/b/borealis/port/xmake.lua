@@ -42,8 +42,8 @@ end
 if is_plat("mingw") then
     add_defines("WINVER=0x0605")
 elseif is_plat("cross") then 
-    -- You need to use this toolchain https://github.com/PoloNX/xmake-devkitpro
-    add_repositories("switch-repo https://github.com/PoloNX/switch-repo")
+    -- You need to use this toolchain https://github.com/exploitz86/xmake-devkitpro
+    add_repositories("switch-repo https://github.com/exploitz86/switch-repo")
     add_requires("libnx")
     platform_resources_path="\"romfs:/\""
 elseif is_plat("linux") then 
